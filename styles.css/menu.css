@@ -1,0 +1,50 @@
+body {
+  background-color: lightsalmon;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+  align-items: center;
+  height: 25px;
+  background-color: blanchedalmond;
+  padding: 3px 10px 3px 0;
+  border-bottom: 2px solid white;
+}
+
+a, a:active {
+  color: black;
+}
+
+#menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  width: 17vh;
+  height: 15vh;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.food-image {
+  object-fit:contain;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: darkslateblue;
+  width: 100%;
+  border-top: 2px solid white;
+  height: 100px;
+}
