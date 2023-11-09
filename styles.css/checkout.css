@@ -1,0 +1,14 @@
+ body {
+    background-color: lightsalmon;
+ }
+
+
+  footer {
+    background-color: darkslateblue;
+    width: 100%;
+    border-top: 2px solid white;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
