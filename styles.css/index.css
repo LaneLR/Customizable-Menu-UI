@@ -1,11 +1,13 @@
 body {
-  background-color: lightsalmon;
+  background-color: white;
+  height: 1500px;
 }
 
 #menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 150px);
-  gap: 15px;
+  column-gap: 100px;
+  row-gap: 100px;
   justify-content: center;
   align-items: center;
   height: 70vh;
@@ -44,12 +46,26 @@ button {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-footer {
+.cart-bar {
   background-color: darkslateblue;
-  width: 100%;
-  border-top: 2px solid white;
-  height: 100px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  display: flex;
+  width: 350px;
+  height: 50px;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-circle {
+  background-color: white;
+  height: 110px;
+  width: 110px;
+  border-radius: 90px;
+  display: flex;
+  border: 26px solid darkslateblue;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-icon {
 }
