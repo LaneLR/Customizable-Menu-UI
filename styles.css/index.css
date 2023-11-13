@@ -3,6 +3,14 @@ body {
   height: 1500px;
 }
 
+#menu-container {
+  background-color: white;
+  border: none;
+  margin-top: 60px;
+}
+
+/* 
+Bootstrap was added, this code is no longer required
 #menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 150px);
@@ -13,7 +21,7 @@ body {
   height: 70vh;
   margin-top: 100px;
 }
-
+*/
 button {
   cursor: pointer;
   height: 15vh;
@@ -23,18 +31,25 @@ button {
   background-color: transparent;
 }
 
+/*
+Bootstrap was added, this code is no longer required
 .food-option {
   display: flex;
   flex-direction: column;
   width: 140px;
   height: 140px;
  }
+ */
+
+.food-image-container {
+  display: inline-block;
+  object-fit: contain;
+}
 
 .food-image {
-  display: flex;
-  object-fit: contain;
-  width: 120px;
-  height: 120px;
+  width: 125px;
+  height: 100%;
+  margin: 30px 40px 2px 40px;
 }
 
 .food-image:hover {
