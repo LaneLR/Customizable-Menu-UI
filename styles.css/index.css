@@ -1,19 +1,32 @@
 body {
   background-color: white;
   height: 2500px;
+  max-width: 96vw;
 }
+
+button {
+  cursor: pointer;
+  height: 15vh;
+  width: 30px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/*Code below is for everything in the menu section*/
 
 #menu-container {
   background-color: white;
-  display: flex;
   border: none;
-  margin-top: 60px;
-  align-items: center;
-  justify-content: center;
+  margin: 60px -50px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 35px;
 }
 
 /* 
-Bootstrap was added, this code is no longer required
+Bootstrap was added, this code is deprecated
 #menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 150px);
@@ -24,18 +37,7 @@ Bootstrap was added, this code is no longer required
   height: 70vh;
   margin-top: 100px;
 }
-*/
-button {
-  cursor: pointer;
-  height: 15vh;
-  width: 30px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
 
-/*
-Bootstrap was added, this code is no longer required
 .food-option {
   display: flex;
   flex-direction: column;
@@ -44,16 +46,23 @@ Bootstrap was added, this code is no longer required
  }
  */
 
-.food-image-container {
-  display: inline-block;
+.food-container {
+  display: flex;
   object-fit: contain;
-  z-index: 1;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  padding: 15px 20px;
+  margin: 3px;
+  border: 2px solid darkgray;
+  border-radius: 45px;
 }
 
 .food-image {
-  width: 125px;
-  height: 100%;
-  margin: 30px 40px 2px 40px;
+  display: flex;
+  width: 150px;
+  height: 125px;
+  padding: 0 25px 0 0;
 }
 
 .food-image:hover {
@@ -61,9 +70,22 @@ Bootstrap was added, this code is no longer required
 }
 
 .food-desc {
-  margin-top: 4px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.food-title {
+  width: 200px;
+  position: absolute;
+  font-weight: bold;
+}
+
+.food-title p {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+}
+
+/*Code below is for the shopping cart bar*/
 
 .cart-bar-wrapper {
   height: 100%;
