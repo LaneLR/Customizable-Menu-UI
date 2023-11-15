@@ -15,10 +15,16 @@ button {
 
 /*Code below is for everything in the menu section*/
 
+.heading {
+  text-align: left;
+  font-weight: bold;
+  margin: 50px 0 0 60px;
+}
+
 #menu-container {
   background-color: white;
   border: none;
-  margin: 60px -50px 0 50px;
+  margin: 20px -50px 40px 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
@@ -115,4 +121,8 @@ Bootstrap was added, this code is deprecated
   border: 20px solid darkslateblue;
   align-items: center;
   justify-content: center;
+}
+
+#cart-img:hover {
+  cursor: pointer;
 }
