@@ -1,0 +1,128 @@
+body {
+  background-color: white;
+  height: 2500px;
+  max-width: 96vw;
+}
+
+button {
+  cursor: pointer;
+  height: 15vh;
+  width: 30px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/*Code below is for everything in the menu section*/
+
+.heading {
+  text-align: left;
+  font-weight: bold;
+  margin: 50px 0 0 60px;
+}
+
+#menu-container {
+  background-color: white;
+  border: none;
+  margin: 20px -50px 40px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 35px;
+}
+
+/* 
+Bootstrap was added, this code is deprecated
+#menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  column-gap: 100px;
+  row-gap: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin-top: 100px;
+}
+
+.food-option {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 140px;
+ }
+ */
+
+.food-container {
+  display: flex;
+  object-fit: contain;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  padding: 15px 20px;
+  margin: 3px;
+  border: 2px solid darkgray;
+  border-radius: 45px;
+}
+
+.food-image {
+  display: flex;
+  width: 150px;
+  height: 125px;
+  padding: 0 25px 0 0;
+}
+
+.food-image:hover {
+  cursor: pointer;
+}
+
+.food-desc {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.food-title {
+  width: 200px;
+  position: absolute;
+  font-weight: bold;
+}
+
+.food-title p {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+}
+
+/*Code below is for the shopping cart bar*/
+
+.cart-bar-wrapper {
+  height: 100%;
+  position: sticky;
+  display: unset;
+  top: 80vh;
+  z-index: 10;
+}
+
+.cart-bar {
+  background-color: darkslateblue;
+  display: flex;
+  width: 450px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.big-circle {
+  background-color: white;
+  height: 120px;
+  width: 130px;
+  border-radius: 90px;
+  display: flex;
+  border: 20px solid darkslateblue;
+  align-items: center;
+  justify-content: center;
+}
+
+#cart-img:hover {
+  cursor: pointer;
+}
