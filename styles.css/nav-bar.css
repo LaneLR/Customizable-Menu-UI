@@ -1,22 +1,22 @@
 .nav-bar {
-    display: flex;
-    gap: 15px;
-    justify-content: right;
-    align-items: center;
-    height: 80px;
-    background-color: blanchedalmond;
-    border-bottom: 2px solid white;
-    position: absolute;
-    padding: 3px 10px 3px 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  gap: 15px;
+  justify-content: right;
+  align-items: center;
+  height: 80px;
+  background-color: blanchedalmond;
+  width: 100%;
+  font-size: 1.6dvw;
+}
   
 a, a:active {
-    color: black;
-    text-decoration: none;
-  }
+  color: black;
+  text-decoration: none;
+}
 
 .logo {
   display: flex;
@@ -32,25 +32,24 @@ a, a:active {
 }
   
 #nav-cart {
-    background-color: white;
-    border-radius: 50px;
-    height: 40px;
-    width: 40px;
-    overflow: hidden;
-  }
+  background-color: white;
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+}
 
-.checkout-img {
-    object-fit: cover;
-    margin: 5px 0 0 5px;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-  }
+#checkout-img {
+  object-fit: cover;
+  margin: 5px 0 0 5px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
 
 #nav-more {
-    transform: rotate(90deg);
-    font-weight: bold;
-    font-size: 1.6rem;
-    margin: 0 5px 0 5px;
-  }
+  transform: rotate(90deg);
+  font-weight: bold;
+  margin: 0 5px 0 5px;
+}

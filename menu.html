@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="styles.css/nav-bar.css">   
     <link rel="stylesheet" href="styles.css/menu.css">
-    <link rel="stylesheet" href="styles.css/nav-bar.css">
     <title>Menu</title>
   </head>
   <body>
+      <nav class="nav-bar">
+        <div id="logo">
+          <a href="index.html"><img id="logo-img" alt="Company logo" src="images/food-images/burger2.png"></a>
+        </div>
+        <p id="nav-menu"><a href="index.html">Menu</a></p>
+        <p id="nav-rewards"><a href="#nav-rewards">Rewards</a></p>
+        <p id="nav-cart"><a href="checkout.html"><img id="checkout-img" src="images/icons/checkout-cart.png"></a></p>
+        <p id="nav-more"><a href="#nav-more">...</a></p>
+      </nav>
     <div class="cart-bar-wrapper">
       <div class="cart-bar align">
         <div class="big-circle align">
@@ -19,35 +28,25 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-    <main>
-      <nav class="nav-bar">
-        <div id="logo">
-          <a href="index.html"><img id="logo-img" alt="Company logo" src="images/food-images/burger2.png"></a>
-        </div>
-        <p id="nav-menu" class="nav-icon"><a href="index.html">Menu</a></p>
-        <p id="nav-rewards" class="nav-icon"><a href="#nav-rewards">Rewards</a></p>
-        <p id="nav-cart" class="nav-icon"><a href="checkout.html"><img class="checkout-img" src="images/icons/checkout-cart.png"></a></p>
-        <p id="nav-more" class="nav-icon"><a href="#nav-more">...</a></p>
-      </nav>
+    <main class="container-fluid">
         <div class="row">
           <!--Sandwich and Combos menu-->
           <h1 class="heading">Sandwiches <span style="font-size: 30px;">&</span> Combos</h1>
-          <div id="menu-container" class="col-md-12 text-center">
+          <div id="menu-container" class="col-lg-12 text-center">
             <div class="food-container">
               <div class="food-image">
                 <!--Change the img src to change picture of item on the menu-->
                 <img src="images/food-images/burger1.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$5.98</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
                   <p>#1 The Burganator</p>
                 </div>
                 <div class="food-description">
-                  <p>Our classic burger, comes with a side of fries and drink.</p>
+                  <p>Our classic burger, drenched in a secret sauce.</p>
                 </div>
               </div>
             </div>
@@ -56,7 +55,7 @@
                 <img src="images/food-images/burger2.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$7.98</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
@@ -72,194 +71,194 @@
                 <img src="images/food-images/burger3.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$10.98</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>#3 Burgey</p>
+                  <p>#3 The Boujee Burger</p>
                 </div>
                 <div class="food-description">
-                  <p>This one comes on a wheat bun.</p>
+                  <p>A large hefty rich tasting burger.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger1.png">
+                <img src="images/food-images/burger4.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$8.99</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>BORGER</p>
+                  <p>#4 The B.O.B.</p>
                 </div>
                 <div class="food-description">
-                  <p>Description</p>
+                  <p>The Big Ol' Burger (B.O.B.) is a hefty burger dripping with delicious sauce.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger2.png">
+                <img src="images/food-images/burger5.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$12.97</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>Boujie</p>
+                  <p>#5 Top Heavy</p>
                 </div>
                 <div class="food-description">
-                  <p>Dis borger make u feel rich</p>
+                  <p>Not for the faint of heart, this burger boasts over 1000 calories. For most people, it's breakfast <em>and</em> lunch.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger3.png">
+                <img src="images/food-images/burger6.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$4.78</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>Burger Combo</p>
+                  <p>#6 Featherweight</p>
                 </div>
                 <div class="food-description">
-                  <p>Description</p>
+                  <p>A slider for those looking for a quick bite.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger1.png">
+                <img src="images/food-images/burger7.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$9.97</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>Burger Combo</p>
+                  <p>#7 Joey's Pick</p>
                 </div>
                 <div class="food-description">
-                  <p>Description</p>
+                  <p>Our head chef's favorite.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger2.png">
+                <img src="images/food-images/burger8.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$7.98</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>Burger Combo</p>
+                  <p>#8 Veggie Lover's</p>
                 </div>
                 <div class="food-description">
-                  <p>Description</p>
+                  <p>A veggie burger that can come with a patty for those wanting a little more oomph with their food.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger3.png">
+                <img src="images/food-images/burger9.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$5.99</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>Burger Combo</p>
+                  <p>#9 Kid's Smile Meal</p>
                 </div>
                 <div class="food-description">
-                  <p>Description</p>
+                  <p>Our signature kid's meal, comes with apple slices and milk.</p>
                 </div>
               </div>
             </div>
           </div>
           <!--Drinks menu-->
           <h1 class="heading">Drinks</h1>
-          <div id="menu-container" class="col-md-12 text-center">
+          <div id="menu-container" class="col-lg-12 text-center">
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger1.png">
+                <img src="images/food-images/root-beer.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$1.79</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>#1 The Burganator</p>
+                  <p>Soda</p>
                 </div>
                 <div class="food-description">
-                  <p>Our classic burger, comes with a side of fries and drink.</p>
+                  <p>Your choice of Coke, Pepsi, A&W Root Beer and Fanta.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
                 <div class="price">
-                  <p class="cost">$9.98</p>
+                  <p class="cost">$1.79</p>
                 </div>
-                <img src="images/food-images/burger2.png">
+                <img src="images/food-images/lemonade.png">
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>#2 Burgadouble-anator</p>
+                  <p>Lemonade</p>
                 </div>
                 <div class="food-description">
-                  <p>A double-sized Burganator.</p>
+                  <p>Freshly squeezed lemonade.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger3.png">
+                <img src="images/food-images/orange-drink.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$1.79</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>#3 Burgey</p>
+                  <p>Orange Juice</p>
                 </div>
                 <div class="food-description">
-                  <p>This one comes on a wheat bun.</p>
+                  <p>Freshly squeezed orange juice.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger1.png">
+                <img src="images/food-images/water.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$2.98</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>Burger Combo</p>
+                  <p>Water</p>
                 </div>
                 <div class="food-description">
-                  <p>Description</p>
+                  <p>Premium Dasani bottled water.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger2.png">
+                <img src="images/food-images/flurry.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$4.98</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>Burger Combo</p>
+                  <p>Ice Cream Flurry</p>
                 </div>
                 <div class="food-description">
-                  <p>Description</p>
+                  <p>A flurry of ice cream. Comes in chocolate, vanilla and strawberry flavors.</p>
                 </div>
               </div>
             </div>
@@ -269,59 +268,60 @@
           <div id="menu-container" class="col-md-12 text-center">
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger3.png">
+                <img src="images/food-images/pie.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$5.97</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>#1 The Burganator</p>
+                  <p>Slice of Pie</p>
                 </div>
                 <div class="food-description">
-                  <p>Our classic burger, comes with a side of fries and drink.</p>
+                  <p>A slice of apple, pecan or peanut butter pie.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger1.png">
+                <img src="images/food-images/cake.png">
               </div>
               <div class="price">
                 <p class="cost">$9.98</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>#2 Burgadouble-anator</p>
+                  <p>Cake</p>
                 </div>
                 <div class="food-description">
-                  <p>A double-sized Burganator.</p>
+                  <p>A full-sized cake flavored either chocolate or vanilla. Discounted on birthdays.</p>
                 </div>
               </div>
             </div>
             <div class="food-container">
               <div class="food-image">
-                <img src="images/food-images/burger2.png">
+                <img src="images/food-images/cookie.png">
               </div>
               <div class="price">
-                <p class="cost">$9.98</p>
+                <p class="cost">$2.50</p>
               </div>
               <div class="food-desc text-center">
                 <div class="food-title">
-                  <p>#3 Burgey</p>
+                  <p>Large Cookie</p>
                 </div>
                 <div class="food-description">
-                  <p>This one comes on a wheat bun.</p>
+                  <p>A big chocolate chip cookie, made fresh every morning.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-    </div>
     <script src="scripts/scripts.js"></script>
   </body>
   <footer>
+    <div class="footer">
       
+    </div>
   </footer>
   </html>

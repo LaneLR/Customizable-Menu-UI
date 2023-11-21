@@ -37,6 +37,10 @@ img {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a, a:active, a:hover {
+    text-decoration: none;
+  }
+
 .start-bar:hover {
     cursor: pointer;
 }
