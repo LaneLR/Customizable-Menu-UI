@@ -7,6 +7,7 @@ body {
 a, a:active, a:hover {
   color: black;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 /*Code below is for the menu section*/
@@ -15,6 +16,25 @@ a, a:active, a:hover {
   text-align: left;
   font-weight: bold;
   margin: -30px 0 0 60px;
+}
+
+.menu-bar {
+  display: flex;
+  gap: 50px;
+  font-size: 16px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+.menu-bar p {
+  scroll-behavior: smooth;
+}
+
+
+.menu-bar a {
+  color: darkslateblue;
+  font-weight: bold;
 }
 
 #menu-container {
@@ -57,7 +77,7 @@ Bootstrap was added, this code is deprecated
   width: 400px;
   height: 200px;
   padding: 15px 20px;
-  margin: 3px;
+  margin: 2px;
   border: 2px solid darkgray;
   border-radius: 45px;
 }
