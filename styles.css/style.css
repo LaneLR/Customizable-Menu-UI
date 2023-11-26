@@ -14,7 +14,6 @@ footer {
   background-color: rgb(44, 35, 105);
   position: relative;
   bottom: 0;
-  width: 100%;
   border-top: 2px solid white;
   height: 150px;
 }
@@ -49,10 +48,11 @@ footer {
 #menu-container {
   background-color: white;
   margin: 20px 0 60px 0;
-  padding-left: 80px;
+  padding-left: 4%;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  align-items: center;
   gap: 35px;
   overflow: hidden;
 }
@@ -102,7 +102,7 @@ Bootstrap was added, this code is deprecated
   cursor: pointer;
 }
 
-.food-desc {
+.food-desc, .food-description {
   display: flex;
   font-size: 15px;
   text-align: left;
@@ -213,5 +213,45 @@ Bootstrap was added, this code is deprecated
 
 .points {
   margin-top: 20px;
+}
+
+#rewards-container {
+  background-color: white;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  padding-left: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  gap: 35px;
+  overflow: hidden;
+  font-weight: 400;
+}
+
+.coupon-container {
+  display: flex;
+  object-fit: contain;
+  align-items: center;
+  position: relative;
+  width: 430px;
+  height: 200px;
+  padding: 15px 20px;
+  margin: 2px;
+  border: 2px solid darkgray;
+  border-radius: 45px;
+}
+
+.coupon-image {
+  display: flex;
+  width: 150px;
+  height: 125px;
+  padding: 0 25px 0 0;
+}
+
+.coupon {
+ transform: rotate(-45deg);
+ font-weight: 700;
+ font-size: 50px;
 }
 
