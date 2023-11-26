@@ -10,6 +10,15 @@ main a, main a:active, main a:hover {
   scroll-behavior: smooth;
 }
 
+footer {
+  background-color: rgb(44, 35, 105);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid white;
+  height: 150px;
+}
+
 /*Code below is for the menu section*/
 
 .heading {
@@ -117,8 +126,6 @@ Bootstrap was added, this code is deprecated
   font-size: 18px;
 }
 
-
-
 /*Code below is for the shopping cart bar*/
 
 .cart-bar-wrapper {
@@ -174,12 +181,37 @@ Bootstrap was added, this code is deprecated
   cursor: pointer;
 }
 
-footer {
-  background-color: rgb(44, 35, 105);
-  width: 100%;
-  border-top: 2px solid white;
-  margin-top: 100px;
-  height: 150px;
-  left: 0;
-  bottom: 0;
+/*Code below is for Rewards and Checkout page*/
+
+#reward, #checkout {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 20px;
 }
+
+.div-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.div-bar {
+  background-color: rgb(230, 230, 230);
+  width: 450px;
+  height: 6px;
+  border-radius: 10px;
+}
+
+.div-bar-footer {
+  background-color: rgb(230, 230, 230);
+  width: 450px;
+  height: 6px; 
+  position: relative;
+}
+
+.points {
+  margin-top: 20px;
+}
+
