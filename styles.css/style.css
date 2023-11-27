@@ -198,21 +198,20 @@ Bootstrap was added, this code is deprecated
 }
 
 .div-bar {
-  background-color: rgb(230, 230, 230);
-  width: 450px;
+  background-color: rgb(175, 175, 175);
+  width: 25vw;
   height: 6px;
   border-radius: 10px;
 }
 
-.div-bar-footer {
-  background-color: rgb(230, 230, 230);
-  width: 450px;
-  height: 6px; 
-  position: relative;
-}
-
 .points {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.points-to-dollars {
+  color: rgba(10, 116, 6, 0.5)
 }
 
 #rewards-container {
