@@ -16,6 +16,7 @@ products.forEach((product) => {
       <div class="food-desc text-center">
         <div class="food-title">
           <p>${product.name}</p>
+          <button class="add-to-cart-button">Add Item</button>
         </div>
         <div class="food-description">
           <p>${product.description}</p>
