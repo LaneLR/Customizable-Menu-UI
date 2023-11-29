@@ -27,4 +27,4 @@ products.forEach((product) => {
   `;
 });
 
-document.querySelector('.row').innerHTML = productsHTML;
+document.querySelector('.checkout-grid').innerHTML = productsHTML;
