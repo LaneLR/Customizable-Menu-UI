@@ -24,16 +24,13 @@ products.forEach((product) => {
       </div>
     </div>
   </div>
-  `;
+  `
 });
 
-document.getElementById('checkout-grid').innerHTML = productsHTML;
+document.querySelector('.checkout-grid').innerHTML = productsHTML;
 
-document.querySelectorAll('.food-container').forEach((button) => {
-  button.addEventListener('click', () => {
-    const productID = button.dataset.checkoutArray; 
-
-    let matchingItem;
+function addToCheckout(productID) {
+  let matchingItem;
 
     checkoutArray.forEach((item) => {
       if (productID === item.productID) {
@@ -49,6 +46,11 @@ document.querySelectorAll('.food-container').forEach((button) => {
         quantity: 1 
       });
     }
+}
+
+document.querySelectorAll('.add-to-cart-button').forEach((button) => {
+  button.addEventListener('click', () => { 
+    addToCheckout(productID);
     
     let checkoutQuantity = 0;
 
@@ -56,7 +58,7 @@ document.querySelectorAll('.food-container').forEach((button) => {
       checkoutQuantity += item.quantity;
     });
 
-    document.getElementById('checkout-grid').innerHTML = checkoutQuantity;
+    document.querySelector('.checkout-grid').innerHTML = checkoutQuantity;
   });
 });
 
