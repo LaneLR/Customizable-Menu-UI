@@ -28,3 +28,35 @@ products.forEach((product) => {
 });
 
 document.getElementById('checkout-grid').innerHTML = productsHTML;
+
+document.querySelectorAll('.food-container').forEach((button) => {
+  button.addEventListener('click', () => {
+    const productID = button.dataset.checkoutArray; 
+
+    let matchingItem;
+
+    checkoutArray.forEach((item) => {
+      if (productID === item.productID) {
+        matchingItem = item;
+      }
+    });
+
+    if (matchingItem) {
+      matchingItem += 1;
+    } else {
+      checkoutArray.push({
+        id: productID,
+        quantity: 1 
+      });
+    }
+    
+    let checkoutQuantity = 0;
+
+    checkoutArray.forEach((item) => {
+      checkoutQuantity += item.quantity;
+    });
+
+    document.getElementById('checkout-grid').innerHTML = checkoutQuantity;
+  });
+});
+
