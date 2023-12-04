@@ -188,7 +188,7 @@ Bootstrap was added, this code is deprecated
   align-items: center;
 }
 
-.item-count {
+.js-item-count {
   font-weight: bold;
   display: unset;
   font-size: 20px;

@@ -1,34 +1,20 @@
 export const checkoutArray = []
 
-renderCheckout();
+export function addToCheckout(productID) {
+  let matchingItem;
 
-function renderCheckout() {
-  let menuListHTML = '';
-
-  checkoutArray.forEach((menuObject) => {
-    const { html } = menuObject;
-    const menuHTML = html;
-    menuListHTML += menuHTML;
-  })
-
-  document.querySelector('.added-checkout-item').innerHTML = menuListHTML;
-  document.querySelectorAll('.delete-button')
-  .forEach((deleteButton, index) => {
-    deleteButton.addEventListener('click', () => {
-      toDoArray.splice(index, 1);
-      renderList();
-    });
+  checkoutArray.forEach((checkoutItem) => {
+    if (productID === checkoutItem.productID) {
+      matchingItem = checkoutItem;
+    }
   });
-};
 
-document.querySelectorAll('.food-container').addEventListener('click', () => {
-  appendCheckoutArray();
-});
-
-function appendCheckoutArray() {
-  const clickedElem = document.querySelector('.food-container').id;
-  document.getElementById(clickedElem).innerHTML = html;
-  checkoutArray.push(html);
-
-  renderCheckout();
-};
+  if (matchingItem) {
+    matchingItem.quantity += 1;
+  } else {
+    checkoutArray.push({
+      productID: productID,
+      quantity: 1 
+    });
+  }
+}
