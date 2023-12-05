@@ -27,28 +27,7 @@ products.forEach((product) => {
   `
 });
 
-document.querySelector('.js-menu-grid').innerHTML = productsHTML;
-
-function addToCheckout(productID) {
-  let matchingItem;
-
-  checkoutArray.forEach((checkoutItem) => {
-    if (productID === checkoutItem.productID) {
-      matchingItem = checkoutItem;
-    }
-  });
-
-    if (matchingItem) {
-    matchingItem.quantity += 1;
-    } else {
-    checkoutArray.push({
-      productID: productID,
-      quantity: 1 
-    });
-  }
-}
-
-
+document.querySelector('.js-item-count').innerHTML = productsHTML;
 
 function updateCheckoutQuantity() {
   let checkoutQuantity = 0;

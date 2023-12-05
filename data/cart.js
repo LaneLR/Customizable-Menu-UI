@@ -1,4 +1,4 @@
-export const checkoutArray = []
+export const checkoutArray = [];
 
 export function addToCheckout(productID) {
   let matchingItem;
