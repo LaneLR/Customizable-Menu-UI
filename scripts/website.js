@@ -35,7 +35,7 @@ document.querySelectorAll('.add-to-cart-button').forEach((button) => {
     checkoutArray.forEach((checkoutItem) => {
       checkoutQuantity += checkoutItem.quantity;
     });
-    document.querySelector(.'js-item-count').innerHTML = checkoutQuantity;
+    document.querySelector('.js-item-count').innerHTML = checkoutQuantity;
   })
 })
 
