@@ -27,7 +27,17 @@ products.forEach((product) => {
   `
 });
 
-document.querySelector('.js-item-count').innerHTML = productsHTML;
+document.querySelector('.menu-grid').innerHTML = productsHTML;
+
+document.querySelectorAll('.add-to-cart-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    let checkoutQuantity = 0;
+    checkoutArray.forEach((checkoutItem) => {
+      checkoutQuantity += checkoutItem.quantity;
+    });
+    document.querySelector(.'js-item-count').innerHTML = checkoutQuantity;
+  })
+})
 
 function updateCheckoutQuantity() {
   let checkoutQuantity = 0;
