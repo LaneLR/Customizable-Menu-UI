@@ -1,5 +1,3 @@
-import { checkoutArray, addToCheckout } from "../data/cart";
-import { products } from "../data/products";
 
 let productsHTML = '';
 
@@ -29,15 +27,30 @@ products.forEach((product) => {
 
 document.getElementById('menu-grid').innerHTML = productsHTML;
 
+
 function addToCartbar(button) {
   let cartbarQuantity = 0;
-  button.forEach(function(addButtons) {
+  button.forEach(addButtons, () => {
     addButtons.addEventListener('click', () => {
       cartbarQuantity += 1;
     });
     document.querySelector('.js-item-count').innerHTML = cartbarQuantity;
   })
 }
+
+/*
+const addToCart = () => {
+  let cartQuantity = 0;
+  let cartHTML = document.querySelector('.js-item-count').innerHTML;
+  let button = document.querySelectorAll('.add-to-cart-button');
+  button.forEach(addButton, () => {
+    addButton.addEventListener('click', () => {
+      cartQuantity += 1;
+    });
+    cartHTML = cartQuantity;
+  })
+}
+*/
 
 const checkoutArray = [];
 
@@ -60,5 +73,20 @@ function addToCheckout(productID) {
   }
 }
 
+const addToCart = () => {
+  let cartQuantity = 0;
+  let cartHTML = document.querySelector('.js-item-count');
 
+  // Select all elements with class 'add-to-cart-button'
+  let buttons = document.querySelectorAll('.add-to-cart-button');
 
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      cartQuantity += 1;
+      cartHTML.innerHTML = cartQuantity; // Update the cart count in the HTML
+    });
+  });
+};
+
+// Call the function to set up the event listeners
+addToCart();
