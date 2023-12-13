@@ -173,13 +173,13 @@ Bootstrap was added, this code is deprecated
   position: relative;
 }
 
-.little-circle {
+.little-circle-right, .little-circle-left {
   background-color: white;
   display: flex;
   height: 30px;
   width: 50px;
   position: absolute;
-  right: -130px;
+  overflow: hidden;
   border-radius: 30px;
 }
 
@@ -188,11 +188,29 @@ Bootstrap was added, this code is deprecated
   align-items: center;
 }
 
+.little-circle-right {
+  right: -130px;
+}
+
+.little-circle-left {
+  right: 190px;
+}
+
 .js-item-count {
   font-weight: bold;
   display: unset;
   font-size: 20px;
   padding-top: 10px;
+}
+
+.empty-cart-button {
+  font-weight: 700;
+  display: unset;
+  font-size: 20px;
+  padding-top: 10px;
+  border: none;
+  background-color: white;
+  margin: 0 0 8px 0;
 }
 
 #cart-img:hover {
