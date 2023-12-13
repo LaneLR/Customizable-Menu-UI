@@ -13,6 +13,7 @@ function addAndRemoveFromCart() {
   });
   emptyCartButton.addEventListener('click', () => {
     cartQuantity = 0;
+    cartHTML.innerHTML = cartQuantity;
     localStorage.removeItem('cartQuantity');
   });
   cartHTML.innerHTML = cartQuantity;
