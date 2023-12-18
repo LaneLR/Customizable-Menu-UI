@@ -10,7 +10,7 @@ function addAndRemoveFromCart() {
       cartQuantity += 1;
       cartHTML.innerHTML = cartQuantity;
       localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
-      productCheckout.innerHTML += addedHTML;
+      document.querySelector('.menu-grid').innerHTML = addedHTML;
     });
   });
   emptyCartButton.addEventListener('click', () => {
@@ -71,8 +71,6 @@ products.forEach((product) => {
   </div>
   `
 });
-
-document.getElementById('menu-grid').innerHTML = productsHTML;
 
 const checkoutArray = [];
 
