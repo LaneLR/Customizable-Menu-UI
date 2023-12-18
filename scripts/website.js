@@ -1,28 +1,3 @@
-function addAndRemoveFromCart() {
-  let cartQuantity = parseInt(localStorage.getItem('cartQuantity')) || 0;
-  let cartHTML = document.querySelector('.js-item-count');
-  let button = document.querySelectorAll('.add-to-cart-button');
-  let emptyCartButton = document.querySelector('.empty-cart-button');
-  let productCheckout = document.querySelector('.menu-grid');
-
-  button.forEach((addButton) => {
-    addButton.addEventListener('click', () => {
-      cartQuantity += 1;
-      cartHTML.innerHTML = cartQuantity;
-      localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
-      document.querySelector('.menu-grid').innerHTML = addedHTML;
-    });
-  });
-  emptyCartButton.addEventListener('click', () => {
-    cartQuantity = 0;
-    cartHTML.innerHTML = cartQuantity;
-    localStorage.removeItem('cartQuantity');
-  });
-  cartHTML.innerHTML = cartQuantity;
-}
-
-addAndRemoveFromCart();
-
 let addedHTML = `
 <div id="menu-container" class="col-lg-12 text-center">
   <div id="burg-#1" class="food-container">
@@ -45,6 +20,37 @@ let addedHTML = `
   </div>
 </div>
 `;
+
+function addAndRemoveFromCart() {
+  let cartQuantity = parseInt(localStorage.getItem('cartQuantity')) || 0;
+  let cartHTML = document.querySelector('.js-item-count');
+  let button = document.querySelectorAll('.add-to-cart-button');
+  let emptyCartButton = document.querySelector('.empty-cart-button');
+  let destinationLoc = document.getElementById('destination');
+
+  button.forEach((addButton) => {
+    addButton.addEventListener('click', () => {
+      cartQuantity += 1;
+      cartHTML.innerHTML = cartQuantity;
+      localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+      if (addedHTML && destinationLoc) {
+        const copiedContent = addedHTML.cloneNode(true);
+        destinationLoc.appendChild(copiedContent);
+      } else {
+        alert('This did not work');
+        cartQuantity -= 1;
+      }
+    });
+  });
+  emptyCartButton.addEventListener('click', () => {
+    cartQuantity = 0;
+    cartHTML.innerHTML = cartQuantity;
+    localStorage.removeItem('cartQuantity');
+  });
+  cartHTML.innerHTML = cartQuantity;
+}
+
+addAndRemoveFromCart();
 
 let productsHTML = '';
 
