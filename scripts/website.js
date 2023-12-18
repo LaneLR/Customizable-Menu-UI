@@ -1,27 +1,26 @@
-let addedHTML = `
-<div id="menu-container" class="col-lg-12 text-center">
-  <div id="burg-#1" class="food-container">
-    <div class="food-image">
-      <!--Change the img src to change picture of item on the menu-->
-      <img src="images/food-images/burger1.png">
-    </div>
-    <div class="price">
-      <p>$5.98</p>
-      <button class="add-to-cart-button">Add Item</button>
-    </div>
-    <div class="food-desc text-center">
-      <div class="food-title">
-        <p>#1 The Burganator</p>
-      </div>
-      <div class="food-description">
-        <p>Our classic burger, drenched in a secret sauce.</p>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 function addAndRemoveFromCart() {
+  let addedHTML = `
+    <div id="menu-container" class="col-lg-12 text-center">
+      <div id="burg-#1" class="food-container">
+        <div class="food-image">
+          <!--Change the img src to change picture of item on the menu-->
+          <img src="images/food-images/burger1.png">
+        </div>
+        <div class="price">
+          <p>$5.98</p>
+          <button class="add-to-cart-button">Add Item</button>
+        </div>
+        <div class="food-desc text-center">
+          <div class="food-title">
+            <p>#1 The Burganator</p>
+          </div>
+          <div class="food-description">
+            <p>Our classic burger, drenched in a secret sauce.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    `;
   let cartQuantity = parseInt(localStorage.getItem('cartQuantity')) || 0;
   let cartHTML = document.querySelector('.js-item-count');
   let button = document.querySelectorAll('.add-to-cart-button');
@@ -30,15 +29,15 @@ function addAndRemoveFromCart() {
 
   button.forEach((addButton) => {
     addButton.addEventListener('click', () => {
-      cartQuantity += 1;
-      cartHTML.innerHTML = cartQuantity;
-      localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
       if (addedHTML && destinationLoc) {
-        const copiedContent = addedHTML.cloneNode(true);
-        destinationLoc.appendChild(copiedContent);
+        cartQuantity += 1;
+        cartHTML.innerHTML = cartQuantity;
+        localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+        const cloneHTML = document.createElement('div')
+        cloneHTML.innerHTML = addedHTML;
+        destinationLoc.appendChild(cloneHTML);
       } else {
-        alert('This did not work');
-        cartQuantity -= 1;
+        alert('Could not add to cart.');
       }
     });
   });
@@ -51,32 +50,6 @@ function addAndRemoveFromCart() {
 }
 
 addAndRemoveFromCart();
-
-let productsHTML = '';
-
-products.forEach((product) => {
-  productsHTML += `
-  <div id="menu-container" class="col-lg-12 text-center">
-    <div class="food-container">
-      <div class="food-image">
-        <img src="${product.image}">
-      </div>
-      <div class="price">
-        <p>$${product.priceInCents / 100}</p>
-      </div>
-      <div class="food-desc text-center">
-        <div class="food-title">
-          <p>${product.name}</p>
-          <button class="add-to-cart-button">Add Item</button>
-        </div>
-        <div class="food-description">
-          <p>${product.description}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  `
-});
 
 const checkoutArray = [];
 
