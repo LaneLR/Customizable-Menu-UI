@@ -1,43 +1,23 @@
 function addAndRemoveFromCart() {
-  let addedHTML = `
-    <div id="menu-container" class="col-lg-12 text-center">
-      <div id="burg-#1" class="food-container">
-        <div class="food-image">
-          <!--Change the img src to change picture of item on the menu-->
-          <img src="images/food-images/burger1.png">
-        </div>
-        <div class="price">
-          <p>$5.98</p>
-          <button class="add-to-cart-button">Add Item</button>
-        </div>
-        <div class="food-desc text-center">
-          <div class="food-title">
-            <p>#1 The Burganator</p>
-          </div>
-          <div class="food-description">
-            <p>Our classic burger, drenched in a secret sauce.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    `;
+  let addedHTML = 'test';
   let cartQuantity = parseInt(localStorage.getItem('cartQuantity')) || 0;
-  let cartHTML = document.querySelector('.js-item-count');
-  let button = document.querySelectorAll('.add-to-cart-button');
+  const cartHTML = document.querySelector('.js-item-count');
+  const button = document.querySelectorAll('.add-to-cart-button');
   let emptyCartButton = document.querySelector('.empty-cart-button');
-  let destinationLoc = document.getElementById('destination');
+  //let destinationLoc = document.getElementById('checkout-grid');
+  //let originalHTML = document.getElementById('priceOne');
+  let destination = document.getElementById('destination');
 
   button.forEach((addButton) => {
     addButton.addEventListener('click', () => {
-      if (addedHTML && destinationLoc) {
-        cartQuantity += 1;
-        cartHTML.innerHTML = cartQuantity;
-        localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
-        const cloneHTML = document.createElement('div')
-        cloneHTML.innerHTML = addedHTML;
-        destinationLoc.appendChild(cloneHTML);
+      cartQuantity += 1;
+      cartHTML.innerHTML = cartQuantity;
+      localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+      if (addedHTML) {
+        addedHTML = destination.innerHTML;
+        destination.appendChild(addedHTML);
       } else {
-        alert('Could not add to cart.');
+        alert('Either source or destination element not found.');
       }
     });
   });
