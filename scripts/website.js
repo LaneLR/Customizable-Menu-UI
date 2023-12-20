@@ -8,12 +8,22 @@ function addAndRemoveFromCart() {
 
   addToCartButton.forEach((addButton) => {
     addButton.addEventListener('click', () => {
-      if (addButton) {
+      if (addToCartButton) {
         cartQuantity += 1;
         cartHTML.innerHTML = cartQuantity;
         localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+        let contentToChange = document.getElementById('checkout-grid');
+        localStorage.setItem('contentToChange', JSON.stringify(contentToChange));
         } else {
           alert('did not work');
+      }
+
+      let contentToUpdateWith = document.getElementById('descOne');
+      let storedContent = localStorage.getItem('contentToChange');
+
+      if (contentToChangeHTML && storedContent) {
+        contentToUpdateWith.innerHTML = storedContent;
+        localStorage.removeItem('contentToChange');
       }
     });
   });
