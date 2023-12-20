@@ -1,23 +1,19 @@
 function addAndRemoveFromCart() {
-  let addedHTML = 'test';
+  let originalElement = document.getElementById('dess-one');
   let cartQuantity = parseInt(localStorage.getItem('cartQuantity')) || 0;
   const cartHTML = document.querySelector('.js-item-count');
-  const button = document.querySelectorAll('.add-to-cart-button');
-  let emptyCartButton = document.querySelector('.empty-cart-button');
-  //let destinationLoc = document.getElementById('checkout-grid');
-  //let originalHTML = document.getElementById('priceOne');
-  let destination = document.getElementById('destination');
+  const addToCartButton = document.querySelectorAll('.add-to-cart-button');
+  const emptyCartButton = document.querySelector('.empty-cart-button');
+  const destination = document.getElementById('checkout-grid');
 
-  button.forEach((addButton) => {
+  addToCartButton.forEach((addButton) => {
     addButton.addEventListener('click', () => {
-      cartQuantity += 1;
-      cartHTML.innerHTML = cartQuantity;
-      localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
-      if (addedHTML) {
-        addedHTML = destination.innerHTML;
-        destination.appendChild(addedHTML);
-      } else {
-        alert('Either source or destination element not found.');
+      if (addButton) {
+        cartQuantity += 1;
+        cartHTML.innerHTML = cartQuantity;
+        localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+        } else {
+          alert('did not work');
       }
     });
   });
