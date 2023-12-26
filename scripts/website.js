@@ -1,10 +1,8 @@
 function addAndRemoveFromCart() {
-  let originalElement = document.getElementById('dess-one');
   let cartQuantity = parseInt(localStorage.getItem('cartQuantity')) || 0;
   const cartHTML = document.querySelector('.js-item-count');
   const addToCartButton = document.querySelectorAll('.add-to-cart-button');
   const emptyCartButton = document.querySelector('.empty-cart-button');
-  const destination = document.getElementById('checkout-grid');
 
   addToCartButton.forEach((addButton) => {
     addButton.addEventListener('click', () => {
@@ -12,18 +10,8 @@ function addAndRemoveFromCart() {
         cartQuantity += 1;
         cartHTML.innerHTML = cartQuantity;
         localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
-        let contentToChange = document.getElementById('checkout-grid');
-        localStorage.setItem('contentToChange', JSON.stringify(contentToChange));
         } else {
           alert('did not work');
-      }
-
-      let contentToUpdateWith = document.getElementById('descOne');
-      let storedContent = localStorage.getItem('contentToChange');
-
-      if (contentToChangeHTML && storedContent) {
-        contentToUpdateWith.innerHTML = storedContent;
-        localStorage.removeItem('contentToChange');
       }
     });
   });
@@ -36,6 +24,16 @@ function addAndRemoveFromCart() {
 }
 
 addAndRemoveFromCart();
+
+function addItemToCheckout() {
+  let itemToAdd = '';
+  const addToCartButton = document.querySelectorAll('.add-to-cart-button');
+  
+  addToCartButton.forEach((addButton) => {
+    addButton.addEventListener('click', () => {
+      
+    }
+  }
 
 const checkoutArray = [];
 
